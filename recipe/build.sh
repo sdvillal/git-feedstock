@@ -40,6 +40,14 @@ if [[ "$target_platform" == osx-* ]]; then
   popd
 fi
 
+
+# build netrc credential manager
+pushd contrib/credential/netrc
+make -e
+cp -avf git-credential-netrc $PREFIX/bin
+popd
+
+
 if [[ -z "${REQUESTS_CA_BUNDLE}" ]] 
 then
     cert_file="${PREFIX}/ssl/cacert.pem"

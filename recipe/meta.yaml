@@ -1,3 +1,4 @@
+# conda-forge git package fork compiling the netrc credential manager
 {% set version = "2.30.2" %}
 
 package:
@@ -25,6 +26,7 @@ build:
   number: 1
   # git hardcodes paths to external utilities (e.g. curl)
   detect_binary_files_with_prefix: true
+  skip: True  # [not linux64]
 
 requirements:
   build:
@@ -89,6 +91,8 @@ about:
 
 extra:
   recipe-maintainers:
+    - sdvillal
+  original-recipe-maintainers:
     - jakirkham
     - msarahan
     - pelson
