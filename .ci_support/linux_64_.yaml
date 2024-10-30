@@ -9,9 +9,9 @@ c_stdlib_version:
 cdt_name:
 - cos7
 channel_sources:
-- conda-forge
+- sdvillal,conda-forge,defaults
 channel_targets:
-- conda-forge main
+- sdvillal main
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 expat:
